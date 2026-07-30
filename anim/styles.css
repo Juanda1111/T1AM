@@ -1,0 +1,106 @@
+body {
+  background-color: lightblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
+}
+
+#paisaje {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border: 1px solid gray;
+  background: #00BFFF;
+  margin: 30px auto 10px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.objeto {
+  position: absolute;
+}
+
+.interactivo {
+  cursor: pointer;
+  user-select: none;
+  transition: filter 0.2s ease;
+}
+
+.interactivo:hover {
+  filter: brightness(1.15);
+}
+
+#sol {
+  top: 45px;
+  right: 70px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animación de rotación del sol */
+.sol-girando {
+  transform: rotate(360deg) scale(1.2);
+}
+
+#nube {
+  top: 30px;
+  left: -130px;
+  animation: flotarNube 18s linear infinite;
+}
+
+/* Animación constante de desplazamiento de la nube */
+@keyframes flotarNube {
+  0% { left: -130px; }
+  100% { left: 820px; }
+}
+
+.nube-soplo {
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+}
+
+#nevado {
+  bottom: -17px;
+  left: -17px;
+}
+
+#nevado2 {
+  bottom: -17px;
+  right: -30px;
+}
+
+#bici {
+  bottom: -25px;
+  left: 350px;
+  z-index: 1;
+  transition: left 0.4s ease-out, transform 0.15s ease;
+}
+
+.bici-avanzando {
+  transform: translateY(-4px) rotate(-3deg);
+}
+
+#arbol {
+  right: 80px;
+  bottom: -4px;
+  z-index: 2;
+  transform-origin: bottom center;
+}
+
+/* Animación de sacudida del árbol */
+.arbol-sacudida {
+  animation: sacudir 0.4s ease;
+}
+
+@keyframes sacudir {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.instrucciones {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

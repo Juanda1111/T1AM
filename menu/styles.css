@@ -1,0 +1,31 @@
+/* Menú con scroll horizontal */
+.scroll-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  overflow-x: auto; /* Permite el scroll horizontal */
+  white-space: nowrap;
+  background: #ffffff;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+.scroll-menu button {
+  flex: 0 0 auto; /* Evita que los botones se encojan */
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+/* Espaciado para que las secciones se puedan desplazar */
+main {
+  margin-top: 60px; /* Compensación por la barra fija */
+}
+
+section {
+  height: 100vh;
+  border-bottom: 1px dashed #aaa;
+  padding: 20px;
+}

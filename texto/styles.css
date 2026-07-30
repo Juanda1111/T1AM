@@ -1,0 +1,42 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  box-sizing: border-border-box;
+}
+
+.contador {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#numCaracteres {
+  font-weight: bold;
+  color: #111;
+}

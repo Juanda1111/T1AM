@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingreso Sucursal Virtual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="login-card">
+    <h2>Ingreso a Sucursal Virtual</h2>
+    <p class="subtitle">Ingrese su clave usando el teclado virtual</p>
+
+    <!-- Display donde se ven los asteriscos de la clave -->
+    <div class="pin-display">
+      <input type="password" id="pinInput" placeholder="••••" readonly maxlength="4">
+    </div>
+
+    <!-- Contenedor del teclado dinamico -->
+    <div class="keypad" id="keypad"></div>
+
+    <!-- Acciones de control -->
+    <div class="actions">
+      <button type="button" class="btn btn-secondary" id="btnClear">Borrar</button>
+      <button type="button" class="btn btn-primary" id="btnSubmit" disabled>Ingresar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
